@@ -42,21 +42,14 @@
       display: inline;
     }
 
-    div.horiz-flowchart {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      flex-flow: row wrap;
-    }
-    div.horiz-flowchart > div {
-      margin: auto;
-    }
-
     div.horiz-columns {
       display: flex;
       align-items: flex-start;
       justify-content: space-around;
       flex-wrap: nowrap;
+    }
+    div.horiz-columns.two-col > div {
+      width: 50%;
     }
 
     ul.horiz-list {
@@ -84,8 +77,8 @@
       height: 100%;
     }
 
-    img.sequence-diagram {
-      border-radius: 10px;
+    .reveal .highlight {
+      color: #9fc855;
     }
 
     </style>
@@ -111,6 +104,135 @@
             <li>Loveable pedant</li>
           </ul>
         </section>
+        <section>
+          <section>
+            <p class="bigtext">Stop me if you've heard this one...</p>
+          </section>
+          <section>
+            <h2>Drupal University</h2>
+            <ul>
+              <li class="fragment">3<span class="fragment">0</span> Colleges</li>
+              <li class="fragment">4<span class="fragment">0</span> Departments each</li>
+              <li class="fragment">Over-worked IT department wants centralization</li>
+              <li class="fragment">Departments want to be special snowflakes</li>
+            </ul>
+          </section>
+          <section>
+            <img src="assets/picard-riker-facepalm.jpg" alt="Picard-Riker Face Palm" />
+          </section>
+          <section>
+            <p class="bigtext">How can we square that circle?</p>
+            <img src="assets/too-many-options.jpg" class="fragment" alt="Too many options" data-credit="https://www.flickr.com/photos/riekhavoc/4975764806" />
+            <aside class="notes">
+              <ul>
+                <li>Lots of options</li>
+                <li>Goal: Confuse you with options, unconfuse with guidelines</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <p class="bigtext">Not rules, more like guidelines</p>
+            <img src="assets/barbosa.gif" style="width: 100%" alt="Not rules, more like guidelines" data-credit="http://www.killerfilm.com/articles-2/read/captain-barbados-confirmed-for-pirates-4-14377" />
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Separate sites</h1>
+          </section>
+          <section>
+            <h2>Separate sites</h2>
+            <ul>
+              <li class="incremental">Never mind, KISS</li>
+              <li class="incremental">Give everyone their own Drupal</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Separate sites</h2>
+            <div class="horiz-columns two-col">
+              <div>
+                <h3 class="fragment">Benefits</h3>
+                <ul>
+                  <li class="fragment">Standard platform</li>
+                  <li class="fragment">No added complexity</li>
+                  <li class="fragment">Complete freedom for each implementation</li>
+                  <li class="fragment">Mixed Drupal versions</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="fragment">Drawbacks</h3>
+                <ul>
+                  <li class="fragment">No economy of scale</li>
+                  <li class="fragment">No (intrinsic) standardization</li>
+                  <li class="fragment">Many sites to have to manage</li>
+                </ul>
+              </div>
+            </div>
+            <aside class="notes">
+              <ul>
+                <li>Don't overlook this option</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <h2>Features.module</h2>
+            <ul>
+              <li class="fragment">Dump configuration to code</li>
+              <li class="fragment">Packages of functionality</li>
+              <li class="fragment">Easily distributable (Sometimes)</li>
+            </ul>
+            <p class="fragment">At least until Drupal 8...</p>
+            <aside class="notes">
+              <ul>
+                <li>Deploy new functionality to many sites, new features module</li>
+                <li>Deploy, enable, done.</li>
+                <li>Not always viable; needs to be discrete functionality</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <h2>Install profiles</h2>
+            <ul>
+              <li class="fragment">Since Drupal 5</li>
+              <li class="fragment">Quasi-modules in Drupal 7</li>
+              <li class="fragment">All the power of a module...</li>
+              <li class="fragment">... plus install wizards
+                <ul>
+                  <li class="fragment">Create content types</li>
+                  <li class="fragment">Create content</li>
+                  <li class="fragment">Create roles</li>
+                  <li class="fragment">Create users</li>
+                  <li class="fragment">Set variables</li>
+                  <li class="fragment">... Do anything that has an API</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>Install profiles</h2>
+            <h2>+</h2>
+            <h2>Features</h2>
+            <h2>=</h2>
+            <h2 class="fragment highlight"><em>Distributions</em></h2>
+          </section>
+          <section>
+            <h2>Distributions</h2>
+            <ul>
+              <li class="fragment">A web application built with Drupal</li>
+              <li class="fragment">Examples:
+                <ul>
+                  <li>Open Atrium</li>
+                  <li>Managing News</li>
+                  <li>Drupal Commons</li>
+                  <li>OpenScholar</li>
+                  <li>Conference Organizing Distribution (COD)</li>
+                  <li>Open Academy</li>
+                  <li class="fragment"><em class="highlight">Your custom distribution here</em></li>
+                </ul>
+              </li>
+            </ul>
+            <p class="fragment"><a href="http://drupal.org/project/distributions">Many many more...</a></p>
+          </section>
+        </section>
 
 
         <section id="final">
@@ -121,6 +243,7 @@
             <p>Keep tabs on our work at <a href="http://twitter.com/Palantir">@Palantir</a></p>
             <p>Want to hear about <a href="http://bit.ly/1uVYZKG">what we're doing</a>?</p>
           </div>
+        </section>
       </div>
     </div>
 
