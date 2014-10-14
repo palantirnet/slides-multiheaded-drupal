@@ -232,6 +232,111 @@
             </ul>
             <p class="fragment"><a href="http://drupal.org/project/distributions">Many many more...</a></p>
           </section>
+          <section>
+            <h2>Example</h2>
+            <h3>Field Museum Microsites</h3>
+            <ul>
+              <li class="fragment">Install profile for major exhibitions</li>
+              <li class="fragment">80% of a site in-a-box
+                <ul>
+                  <li class="fragment">10 content types</li>
+                  <li class="fragment">Media, WYSIWYG, text formats, user roles etc.</li>
+                  <li class="fragment">Common navigation</li>
+                </ul>
+              </li>
+            </ul>
+            <a href="http://www.palantir.net/blog/using-drupal-7-create-microsites"><img class="casestudy" src="assets/fieldmuseum-horse.jpg"  /></a>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Multi-site</h2>
+            <img src="assets/multisite.png" alt="Multi-site architecture" />
+            <aside class="notes">
+              <ul>
+                <li>Drupal feature since at least 4.5</li>
+                <li>One code base, many sites</li>
+                <li>"Separate sites with shared code"</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <h2>Multi-site</h2>
+            <pre><code data-trim>
+/
+  sites/
+    default/
+      settings.php
+    www.drupal.edu/
+      settings.php
+    biology.drupal.edu/
+      settings.php
+            </code></pre>
+          </section>
+          <section>
+            <p>sites/sites.php</p>
+            <pre><code class="php" data-trim>
+$sites['www.drupal.edu'] = 'main';
+
+$sites['fapi.api.drupal.edu'] = 'fapi';
+
+$sites['multisite.building.drupal.edu'] = 'multisite';
+
+$sites['fundraising.drupalassociation.com'] = 'da_fundraising';
+            </code></pre>
+            <pre class="fragment"><code class="plain" data-trim>
+/
+  sites/
+    sites.php
+    default/
+      settings.php
+    www.drupal.edu/
+      settings.php
+    fapi/
+      settings.php
+    da_fundraising/
+      settings.php
+            </code></pre>
+          </section>
+          <section>
+            <h2>Multi-site</h2>
+            <div class="horiz-columns two-col">
+              <div>
+                <h3 class="fragment">Benefits</h3>
+                <ul>
+                  <li class="fragment"><em>Separate Sites, plus...</em></li>
+                  <li class="fragment">One codebase to update</li>
+                  <li class="fragment">Lower memory overhead</li>
+                  <li class="fragment">Table sharing (don't do that!)</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="fragment">Drawbacks</h3>
+                <ul>
+                  <li class="fragment"><em>Separate Sites, plus...</em></li>
+                  <li class="fragment">Only one core version</li>
+                  <li class="fragment">Multiple module versions are hard</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <p style="text-align: left;">If you have one server admin team...</p>
+            <p class="fragment" style="text-align: right;">... use Multi-site</p>
+            <p class="fragment" style="text-align: left;">If you have many server admin teams...</p>
+            <p class="fragment" style="text-align: right;">... use Separate sites</p>
+          </section>
+          <section>
+            <h2>Example</h2>
+            <h3>Washington University St. Louis</h3>
+            <ul>
+              <li class="fragment">Drupal 6, Pre-features</li>
+              <li class="fragment">Partially built database dump</li>
+              <li class="fragment">4 themes to choose from</li>
+              <li class="fragment">Clone DB, flush cache, create settings.php, customize</li>
+            </ul>
+            <a class="casestudy" href="http://www.palantir.net/experience/washington-university-st-louis"><img src="assets/wustl.jpg" alt="Washington University St. Louis" /></a>
+          </section>
         </section>
 
 
