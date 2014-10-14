@@ -251,7 +251,7 @@
         <section>
           <section>
             <h2>Multi-site</h2>
-            <img src="assets/multisite.png" alt="Multi-site architecture" />
+            <img src="assets/multisite.png" alt="Multi-site architecture" class="architecture-diagram" />
             <aside class="notes">
               <ul>
                 <li>Drupal feature since at least 4.5</li>
@@ -336,6 +336,104 @@ $sites['fundraising.drupalassociation.com'] = 'da_fundraising';
               <li class="fragment">Clone DB, flush cache, create settings.php, customize</li>
             </ul>
             <a class="casestudy" href="http://www.palantir.net/experience/washington-university-st-louis"><img src="assets/wustl.jpg" alt="Washington University St. Louis" /></a>
+          </section>
+        </section>
+        <section>
+          <p class="bigtext">You probably don't mean<br />multiple sites anyway...</p>
+          <aside class="notes">
+            <ul>
+              <li>You keep using that word...</li>
+              <li>Probably mean site sections/clusters/divisions</li>
+              <li>Lots of options for one "site", many areas</li>
+            </ul>
+          </aside>
+        </section>
+        <section>
+          <section>
+            <h2>Domain Access</h2>
+            <img src="assets/domainaccess.png" alt="Domain Access architecture" class="architecture-diagram" />
+          </section>
+          <section>
+            <h2><a href="http://drupal.org/project/domain">Domain Access</a></h2>
+            <ul>
+              <li class="fragment">Access Control module</li>
+              <li class="fragment">Node grants (here be dragons)</li>
+              <li class="fragment">Domain == subsite</li>
+              <li class="fragment">Affects node <em>view</em></li>
+              <li class="fragment">Suite of modules</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Domain Access: Basics</h2>
+            <img src="assets/domainaccess/domain-list.png" class="screencap" />
+          </section>
+          <section class="slide">
+            <h2>Domain Access: Basics</h2>
+            <img src="assets/domainaccess/domain-edit.png" class="screencap" />
+          </section>
+          <section class="slide">
+            <h2>Domain Access: Settings overrides</h2>
+            <img src="assets/domainaccess/domain-settings.png" class="screencap" />
+          </section>
+          <section class="slide">
+            <h2>Domain Access: Themes</h2>
+            <img src="assets/domainaccess/domain-theme.png" class="screencap" />
+          </section>
+          <section class="slide">
+            <h2>Domain Access: Themes</h2>
+            <img src="assets/domainaccess/domain-theme-color.png" class="screencap" />
+          </section>
+          <section class="slide">
+            <h2>Domain Access: Timezones</h2>
+            <img src="assets/domainaccess/domain-timezone.png" class="screencap" />
+          </section>
+          <section class="slide">
+            <h2>Domain Access: Node editing</h2>
+            <img src="assets/domainaccess/domain-node-edit.png" class="screencap" />
+          </section>
+          <section class="slide">
+            <h2>Domain Access: Node editing</h2>
+            <img src="assets/domainaccess/domain-node-view.png" class="screencap" />
+          </section>
+          <section class="slide">
+            <h2>Domain Access: Node editing</h2>
+            <img src="assets/domainaccess/domain-content-list.png" class="screencap" />
+          </section>
+          <section>
+            <h2>Domain Access</h2>
+            <div class="horiz-columns two-col">
+              <div>
+                <h3 class="fragment">Benefits</h3>
+                <ul>
+                  <li class="fragment">One site to manage</li>
+                  <li class="fragment">Content sharing</li>
+                  <li class="fragment">Per-domain theme</li>
+                  <li class="fragment">Some per-domain config</li>
+                  <li class="fragment">Consistent architecture</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="fragment">Drawbacks</h3>
+                <ul>
+                  <li class="fragment">Consistent architecture</li>
+                  <li class="fragment">Must use multiple domains</li>
+                  <li class="fragment">Uses node access</li>
+                  <li class="fragment">Single point of failure</li>
+                  <li class="fragment">Everything gets a little bit more complicated...</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Example</h2>
+            <h3>Environment America</h3>
+            <ul>
+              <li class="fragment">One install with Domain Access</li>
+              <li class="fragment">National site, various state-level sites</li>
+              <li class="fragment">Easy content syndication</li>
+              <li class="fragment">Way cheaper than many separate sites</li>
+            </ul>
+           <div><a href="http://www.acquia.com/resources/case-study/environment-america"><img class="casestudy" src="assets/environment-america.jpg"  /></a></div>
           </section>
         </section>
 
