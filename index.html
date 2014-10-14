@@ -436,6 +436,198 @@ $sites['fundraising.drupalassociation.com'] = 'da_fundraising';
            <div><a href="http://www.acquia.com/resources/case-study/environment-america"><img class="casestudy" src="assets/environment-america.jpg"  /></a></div>
           </section>
         </section>
+        <section>
+          <section>
+            <h2>Organic Groups</h2>
+            <img class="vcenter" src="assets/organicgroups.png"  />
+          </section>
+          <section>
+            <h2><a href="http://drupal.org/project/og">Organic Groups</a></h2>
+            <ul>
+              <li class="fragment">Rewritten for Drupal 7</li>
+              <li class="fragment">Any entity == "group"</li>
+              <li class="fragment">Any entity belongs to a "group"</li>
+              <li class="fragment">Users join groups</li>
+            </ul>
+            <aside class="notes">
+              <ul>
+                <li>Think Google Groups, Yahoo Groups</li>
+                <li>Groups.Drupal.org</li>
+                <li>Think bigger than that</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <h2>Organic Groups</h2>
+            <h3>Access control</h3>
+            <ul>
+              <li class="fragment">Per-group Roles</li>
+              <li class="fragment">Per-group user membership</li>
+              <li class="fragment">Per group node/field edit/delete permissions</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Organic Groups</h2>
+            <h3>Integration</h3>
+            <ul>
+              <li class="fragment">Views plugins: Included</li>
+              <li class="fragment">Ctools/Panels Context plugins: Simple</li>
+              <li class="fragment">Very good Chaos suite integration</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Organic Groups</h2>
+            <h3>Group nodes</h3>
+            <img src="assets/og-node-config.png" alt="Organic Group Node configuration" class="screencap" />
+          </section>
+          <section>
+            <h2>Organic Groups</h2>
+            <h3>Permissions</h3>
+            <img src="assets/og-node-config.png" alt="Organic Group permissions" class="screencap" />
+          </section>
+          <section>
+            <h2>Organic Groups</h2>
+            <div class="horiz-columns two-col">
+              <div>
+                <h3 class="fragment">Benefits</h3>
+                <ul>
+                  <li class="fragment">One site to manage</li>
+                  <li class="fragment">Content sharing</li>
+                  <li class="fragment">Per-group theme</li>
+                  <li class="fragment">Only one domain</li>
+                  <li class="fragment">Consistent architecture</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="fragment">Drawbacks</h3>
+                <ul>
+                  <li class="fragment">Consistent architecture</li>
+                  <li class="fragment">Only one domain</li>
+                  <li class="fragment">Still site-wide settings</li>
+                  <li class="fragment">Single point of failure</li>
+                  <li class="fragment">Everything gets a little bit more complicated...</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Example</h2>
+            <h3>California State University Northridge</h3>
+            <ul>
+              <li class="fragment">Every College or Department is a Group
+                <ul>
+                  <li class="fragment">Group node has hidden settings (default slideshow)</li>
+                  <li class="fragment">Lots of Entity Reference</li>
+                </ul>
+              </li>
+              <li class="fragment">Panels Everywhere</li>
+              <li class="fragment">Panelizer</li>
+              <li class="fragment">Separate roles per department</li>
+              <li class="fragment">Very similar themes</li>
+            </ul>
+            <p>Needs CSUN screencap</p>
+          </section>
+        </section>
+        <section>
+          <p class="bigtext">Do you even need multiple "sites"?</p>
+        </section>
+        <section>
+          <section>
+            <p>Just because it's different sites now doesn't mean it has to be</p>
+            <p class="fragment">Just because you call it a "site" doesn't mean it is</p>
+            <p class="fragment">What does "site" even mean?</p>
+            <aside class="notes">
+              <ul>
+                <li>Answer depends on who you ask</li>
+                <li>Perspective</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <p>What does "site" mean?</p>
+            <ul>
+              <li class="fragment">A presence on the web</li>
+              <li class="fragment">An organization's home page</li>
+              <li class="fragment">A path root</li>
+              <li class="fragment">"What I have access to"</li>
+            </ul>
+            <aside class="notes">
+              <ul>
+                <li>For content editors, it means the last one</li>
+              </ul>
+            </aside>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Single-site</h2>
+          </section>
+          <section>
+            <h2>Access control</h2>
+            <h3>Workbench Access</h3>
+            <ul>
+              <li class="fragment">Divide site into administrative sections</li>
+              <li class="fragment">Sections != path (unless you want it to be)</li>
+              <li class="fragment">Assign roles or users to sections</li>
+              <li class="fragment">Affects edit, not view</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Variable themes</h2>
+            <ul>
+              <li class="fragment">Sections module (D6, needs port)</li>
+              <li class="fragment">Panels</li>
+              <li class="fragment">Panels Everywhere</li>
+              <li class="fragment"><a href="http://api.drupal.org/api/drupal/modules!system!system.api.php/function/hook_custom_theme/7"><code>hook_custom_theme()</code></a></li>
+              <li class="fragment">... Or just don't</li>
+            </ul>
+            <aside class="notes">
+              <ul>
+                <li>Panels: Layout tool</li>
+                <li>Panels Everywhere: Layout for page tpl, can vary on context</li>
+                <li></li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <h2>Single site</h2>
+            <div class="horiz-columns two-col">
+              <div>
+                <h3 class="fragment">Benefits</h3>
+                <ul>
+                  <li class="fragment">No/little mental overhead</li>
+                  <li class="fragment">One code base to manage</li>
+                  <li class="fragment">Easy on the server admin and site-admin</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="fragment">Drawbacks</h3>
+                <ul>
+                  <li class="fragment">Limited variability between "sites"</li>
+                  <li class="fragment">Public understands only a single "site"</li>
+                  <li class="fragment">Single navigation hierarchy</li>
+                </ul>
+              </div>
+            </div>
+            <aside class="notes">
+              <ul>
+                <li>Your Org chart is not your IA</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <h2>Example</h2>
+            <h3>Mt. Holyoke College</h3>
+            <ul>
+              <li class="fragment">Many departments, centrally managed</li>
+              <li class="fragment">Workbench access</li>
+              <li class="fragment">All departments have the same design</li>
+            </ul>
+            <a href="http://www.mtholyoke.edu"><img class="casestudy" src="images/mtholyoke.jpg" alt="Mt. Holyoke College" /></a>
+          </section>
+        </section>
+
+
 
 
         <section id="final">
