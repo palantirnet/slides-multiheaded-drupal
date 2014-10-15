@@ -77,8 +77,37 @@
       height: 100%;
     }
 
+    img.architecture-diagram {
+      border-radius: 10px;
+      width: 100%;
+      height: 100%;
+    }
+
     .reveal .highlight {
       color: #9fc855;
+    }
+
+    table.decision-chart {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    table.decision-chart,
+    table.decision-chart td,
+    table.decision-chart th {
+      border: 1px solid #9fc855;
+      padding-left: 1em;
+      text-align: left;
+    }
+
+    table.decision-chart th {
+      color: #9fc855;
+    }
+
+
+    table.decision-chart td {
+      font-size: 0.6em;
+
     }
 
     </style>
@@ -544,7 +573,7 @@ $sites['fundraising.drupalassociation.com'] = 'da_fundraising';
             </aside>
           </section>
           <section>
-            <p>What does "site" mean?</p>
+            <h3>What does "site" mean?</h3>
             <ul>
               <li class="fragment">A presence on the web</li>
               <li class="fragment">An organization's home page</li>
@@ -623,13 +652,61 @@ $sites['fundraising.drupalassociation.com'] = 'da_fundraising';
               <li class="fragment">Workbench access</li>
               <li class="fragment">All departments have the same design</li>
             </ul>
-            <a href="http://www.mtholyoke.edu"><img class="casestudy" src="images/mtholyoke.jpg" alt="Mt. Holyoke College" /></a>
+            <a href="http://www.mtholyoke.edu"><img class="casestudy" src="assets/mtholyoke.jpg" alt="Mt. Holyoke College" /></a>
           </section>
         </section>
-
-
-
-
+        <section>
+          <section>
+            <h2>Mix and Match</h2>
+            <img src="assets/multisite-domainaccess.png" alt="Mixed Multi-site with Domain Access" class="architecture-diagram" />
+          </section>
+          <section>
+            <p>Multi-site can host any combination of sites</p>
+            <ul>
+              <li class="fragment">Multi-site / OG</li>
+              <li class="fragment">Multi-site / Domain Access</li>
+              <li class="fragment">Multi-site / Workbench Access</li>
+              <li class="fragment">Multi-site / Domain Access / OG</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Example</h2>
+            <h3>Barnard College</h3>
+            <ul>
+              <li class="fragment">50 departments and programs</li>
+              <li class="fragment">One site with Domain Access</li>
+              <li class="fragment">... and Workbench Access for even finer control</li>
+            </ul>
+            <div><a href="http://www.palantir.net/experience/barnard-college"><img class="casestudy" src="assets/barnard.jpg"  /></a></div>
+          </section>
+        </section>
+        <section>
+          <h2>Decisions decisions...</h2>
+          <table class="decision-chart">
+            <thead>
+              <tr><th>If you want...</th> <th>Probably means...</th></tr>
+            </thead>
+            <tbody>
+              <tr class="fragment"><td>Multiple core versions</td> <td class="fragment">Separate installs</td></tr>
+              <tr class="fragment"><td>Different content types</td> <td class="fragment">Separate installs, multi-site</td></tr>
+              <tr class="fragment"><td>Single user base</td> <td class="fragment">Domain Access, OG, Single-site</td></tr>
+              <tr class="fragment"><td>Subdomains</td> <td class="fragment">Separate installs, multi-site, Domain Access</td></tr>
+              <tr class="fragment"><td>One domain</td> <td class="fragment">OG, Single-site</td></tr>
+              <tr class="fragment"><td>Simplified server admin</td> <td class="fragment">Domain Access, OG, Single-site</td></tr>
+              <tr class="fragment"><td>Shared content</td> <td class="fragment">Domain Access, OG, Single-site</td></tr>
+              <tr class="fragment"><td>Per-department ACL</td> <td class="fragment">Single-site, OG</td></tr>
+              <tr class="fragment"><td>Department autonomy</td> <td class="fragment">Separate installs, multi-site (maybe OG)</td></tr>
+              <tr class="fragment"><td>Per-department Views</td> <td class="fragment">Separate installs, multi-site (maybe OG)</td></tr>
+              <tr class="fragment"><td>Staggered migration</td> <td class="fragment">Separate installs, multi-site, Domain Access, proxy server shenanigans</td></tr>
+              <tr class="fragment"><td>Per department theme</td> <td class="fragment">Separate installs, Multi-site, Domain Access, OG</td></tr>
+              <tr class="fragment"><td>Inexperienced site admins</td> <td class="fragment">Separate installs, Single-site</td></tr>
+            </tbody>
+          </table>
+        </section>
+        <section>
+          <p class="bigtext">Remember what we said about guidelines</p>
+          <img src="assets/barbosa.gif" style="width: 100%" alt="Not rules, more like guidelines" data-credit="http://www.killerfilm.com/articles-2/read/captain-barbados-confirmed-for-pirates-4-14377" />
+        </section>
         <section id="final">
           <div>
             <h2>Larry Garfield</h2>
