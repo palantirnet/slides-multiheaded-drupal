@@ -176,7 +176,7 @@
         </section>
         <section>
           <section>
-            <h1>Separate sites</h1>
+            <h2>Separate sites</h2>
           </section>
           <section>
             <h2>Separate sites</h2>
@@ -240,7 +240,7 @@
                   <li class="fragment">Create content</li>
                   <li class="fragment">Create roles</li>
                   <li class="fragment">Create users</li>
-                  <li class="fragment">Set variables</li>
+                  <li class="fragment">Set config variables</li>
                   <li class="fragment">... Do anything that has an API</li>
                 </ul>
               </li>
@@ -260,16 +260,21 @@
               <li class="fragment">Examples:
                 <ul>
                   <li>Open Atrium</li>
-                  <li>Managing News</li>
                   <li>Drupal Commons</li>
                   <li>OpenScholar</li>
                   <li>Conference Organizing Distribution (COD)</li>
                   <li>Open Academy</li>
+                  <li>Panopoly</li>
                   <li class="fragment"><em class="highlight">Your custom distribution here</em></li>
                 </ul>
               </li>
             </ul>
             <p class="fragment"><a href="http://drupal.org/project/distributions">Many many more...</a></p>
+            <aside class="notes">
+              <ul>
+                <li>Usually NOT extensible</li>
+              </ul>
+            </aside>
           </section>
           <section>
             <h2>Example</h2>
@@ -377,21 +382,29 @@ $sites['fundraising.drupalassociation.com'] = 'da_fundraising';
             <p class="fragment" style="text-align: right;">... use Multi-site</p>
             <p class="fragment" style="text-align: left;">If you have many server admin teams...</p>
             <p class="fragment" style="text-align: right;">... use Separate sites</p>
+            <p class="fragment" style="margin-top: 2em;">Modern deployment practices mitigate the first</p>
           </section>
           <section>
             <h2>Example</h2>
-            <h3>Washington University St. Louis</h3>
+            <h3>University of Minnesota</h3>
             <div class="horiz-columns two-col">
               <ul>
-                <li class="fragment">Drupal 6, Pre-features</li>
-                <li class="fragment">Partially built database dump</li>
-                <li class="fragment">4 themes to choose from</li>
-                <li class="fragment">Clone DB, flush cache, create settings.php, customize</li>
+                <li class="fragment">~15 Installs</li>
+                <li class="fragment">Many sites per install</li>
+                <li class="fragment">2 install profiles</li>
+                <li class="fragment">No features updates</li>
+                <li class="fragment">Can have custom themes</li>
               </ul>
               <div>
-                <a class="casestudy" href=""><img src="assets/wustl.jpg" alt="Washington University St. Louis" /></a>
+                <a class="casestudy" href="http://www.palantir.net/experience/university-minnesota"><img src="assets/umn-rochester.png" alt="University of Minnesota" /></a>
               </div>
             </div>
+            <aside class="notes">
+              <ul>
+                <li>Multiple multi-sites</li>
+                <li>Custom management logic around each site (complex)</li>
+              </ul>
+            </aside>
           </section>
         </section>
         <section>
@@ -475,6 +488,7 @@ $sites['fundraising.drupalassociation.com'] = 'da_fundraising';
                   <li class="fragment">Must use multiple domains</li>
                   <li class="fragment">Uses node access</li>
                   <li class="fragment">Single point of failure</li>
+                  <li class="fragment">Scales to low-tens</li>
                   <li class="fragment">Everything gets a little bit more complicated...</li>
                 </ul>
               </div>
@@ -551,7 +565,7 @@ $sites['fundraising.drupalassociation.com'] = 'da_fundraising';
           <section>
             <h2>Organic Groups</h2>
             <h3>Permissions</h3>
-            <img src="assets/og-node-config.png" alt="Organic Group permissions" class="screencap" />
+            <img src="assets/og-permission.png" alt="Organic Group permissions" class="screencap" />
           </section>
           <section>
             <h2>Organic Groups</h2>
@@ -562,6 +576,7 @@ $sites['fundraising.drupalassociation.com'] = 'da_fundraising';
                   <li class="fragment">One site to manage</li>
                   <li class="fragment">Content sharing</li>
                   <li class="fragment">Per-group theme</li>
+                  <li class="fragment">Scales to thousands</li>
                   <li class="fragment">Only one domain</li>
                   <li class="fragment">Consistent architecture</li>
                 </ul>
@@ -657,6 +672,7 @@ $sites['fundraising.drupalassociation.com'] = 'da_fundraising';
               <li class="fragment">Sections module (D6, needs port)</li>
               <li class="fragment">Panels</li>
               <li class="fragment">Panels Everywhere</li>
+              <li class="fragment"><a href="https://www.drupal.org/project/themekey">ThemeKey</a></li>
               <li class="fragment"><a href="http://api.drupal.org/api/drupal/modules!system!system.api.php/function/hook_custom_theme/7"><code>hook_custom_theme()</code></a></li>
               <li class="fragment">... Or just don't</li>
             </ul>
@@ -700,13 +716,12 @@ $sites['fundraising.drupalassociation.com'] = 'da_fundraising';
               <ul>
                 <li class="fragment">Many departments, centrally managed</li>
                 <li class="fragment">Workbench access</li>
-                <li class="fragment">All departments have the same design</li>
+                <li class="fragment">ThemeKey for (some) theme switching</li>
               </ul>
               <div>
-                <a href="http://www.mtholyoke.edu"><img class="casestudy" src="assets/mtholyoke.jpg" alt="Mt. Holyoke College" /></a>
+                <a href="http://www.mtholyoke.edu"><img class="casestudy" src="assets/mtholyoke.png" alt="Mt. Holyoke College" /></a>
               </div>
             </div>
-
           </section>
         </section>
         <section>
@@ -728,7 +743,7 @@ $sites['fundraising.drupalassociation.com'] = 'da_fundraising';
             <h3>Barnard College</h3>
             <div class="horiz-columns two-col">
               <ul>
-                <li class="fragment">50 departments and programs</li>
+                <li class="fragment">50 departments</li>
                 <li class="fragment">One site with Domain Access</li>
                 <li class="fragment">... and Workbench Access for edit control</li>
               </ul>
@@ -736,7 +751,7 @@ $sites['fundraising.drupalassociation.com'] = 'da_fundraising';
             </div>
             <aside class="notes">
               <ul>
-                <li>Every department its own Domain (~50)</li>
+                <li>Every department its own Domain</li>
                 <li>WB Access for splitting editing</li>
               </ul>
             </aside>
@@ -766,7 +781,7 @@ $sites['fundraising.drupalassociation.com'] = 'da_fundraising';
           </table>
         </section>
         <section>
-          <p class="bigtext">Remember what we said about guidelines</p>
+          <p class="bigtext">Remember: guidelines</p>
           <img src="assets/barbosa.gif" style="width: 100%" alt="Not rules, more like guidelines" data-credit="http://www.killerfilm.com/articles-2/read/captain-barbados-confirmed-for-pirates-4-14377" />
         </section>
         <section id="final">
